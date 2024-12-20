@@ -1,0 +1,18 @@
+package es.localchat.websocket.model.event;
+
+import es.localchat.websocket.model.event.type.WebSocketEventType;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+public abstract class AbstractWebSocketEvent {
+
+    private WebSocketEventType type;
+
+    public AbstractWebSocketEvent(WebSocketEventType eventType) {
+        this.type = eventType;
+    }
+}
